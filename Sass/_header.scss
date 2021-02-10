@@ -1,0 +1,285 @@
+.header {
+    width: 100%;
+    height: 100vh;
+
+    .nav_Mobile {
+        @include Breackpoint-Down(lg) {
+            display: none;
+        }
+        width: 60px;
+        height: 40px;
+
+        position: relative;
+        margin-right: 30px;
+        z-index: 2000;
+        > span {
+            position: absolute;
+            width: 100%;
+            height: 7px;
+            background-color: #000;
+            transition: all 0.5s ease;
+            &:nth-child(1) {
+                top: 0;
+            }
+            &:nth-child(2) {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:nth-child(3) {
+                bottom: 0;
+            }
+        }
+    }
+    .active_mobile_nav {
+        > span {
+            &:nth-child(1) {
+                top: 50%;
+                transform: translateY(-50%) rotateZ(45deg);
+                transition: all 0.5s ease;
+            }
+            &:nth-child(2) {
+                opacity: 0;
+                transform: translateX(-50%);
+                transition: all 0.5s ease;
+            }
+            &:nth-child(3) {
+                bottom: 50%;
+                transform: translateY(50%) rotateZ(-45deg);
+                transition: all 0.5s ease;
+            }
+        }
+    }
+    .navBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100px;
+        padding: 0 20px;
+        z-index: 1000000;
+        transition: all 0.5s ease;
+        .dropdown {
+            position: absolute;
+            left: 5%;
+            top: 100px;
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            height: 0;
+            background-color: white;
+            transition: all 0.5s ease;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+            ul {
+                padding-left: 50px;
+
+                opacity: 0;
+                li {
+                    text-align: left;
+                    margin: 30px 0;
+                    a {
+                        font-size: 3rem;
+                        color: #000;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+        // .dropdown_Active {
+        //     height: 500px;
+        //     padding: 10px;
+        //     transition: all 0.5s ease;
+        // }
+        nav {
+            width: 100%;
+            max-width: 1400px;
+            height: 120%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .logo {
+                font-size: 3rem;
+                font-family: $Font_Anton;
+                color: #000;
+                font-weight: 800;
+                z-index: 100;
+            }
+            ul {
+                display: flex;
+                li {
+                    margin-left: 20px;
+                    overflow: hidden;
+                    height: 3rem;
+                    padding: 10px;
+
+                    a {
+                        color: #000;
+                        font-size: 1.5rem;
+                        font-family: $Font_Montserrat;
+                        font-weight: 700;
+                        span {
+                            display: block;
+                            transition: all 0.3s ease;
+                        }
+                        .first {
+                            margin-bottom: 10px;
+                        }
+                    }
+                    &:hover .first {
+                        transform: translateY(-135%);
+                        transition: all 0.3s ease;
+                    }
+                    &:hover .second {
+                        transform: translateY(-135%);
+                        transition: all 0.3s ease;
+                    }
+                }
+            }
+        }
+    }
+    .bacground {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        clear: both;
+        float: left;
+        .leftSide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30%;
+            background-color: #fff;
+            height: 100%;
+            z-index: 2;
+        }
+        .rigthSide {
+            position: absolute;
+            width: 70%;
+            top: 0;
+            right: 0;
+            height: 100%;
+            z-index: 1;
+
+            .image {
+                background-image: url("../Images/2.jpg");
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-position: 75% top;
+                background-size: cover;
+                z-index: 0;
+            }
+        }
+        .content {
+            position: relative;
+            width: 100%;
+            max-width: 1400px;
+            height: 100%;
+            z-index: 2;
+
+            margin: 0 auto;
+            .text {
+                position: absolute;
+                width: 100%;
+                top: 50%;
+                transform: translateY(-50%);
+                .F_name {
+                    font-size: 7rem;
+                    -webkit-text-stroke: 1.5px #000;
+                    color: transparent;
+                    text-transform: uppercase;
+                    margin-bottom: 30px;
+                    font-family: $Font_Montserrat;
+                }
+                .L_name {
+                    font-size: 7rem;
+                    color: #000;
+                    text-transform: uppercase;
+                    font-family: $Font_Montserrat;
+                }
+                .Skill_names {
+                    font-size: 1.5rem;
+                    opacity: 0.5;
+                    margin-top: 20px;
+                }
+            }
+        }
+        #Particles {
+            position: absolute;
+            width: 75%;
+            height: 80%;
+            z-index: 600;
+            top: 10%;
+            right: 0;
+        }
+    }
+    @include Breackpoint-up(lg) {
+        .navBar {
+            padding-left: 50px;
+            nav {
+                ul {
+                    display: none;
+                }
+            }
+        }
+        .bacground {
+            .leftSide {
+                display: none !important;
+            }
+            .rigthSide {
+                width: 100%;
+                .image {
+                    background-image: url(../images/2.jpg);
+                    background-position: bottom center !important;
+                    background-size: cover !important;
+                }
+            }
+            .content {
+                .text {
+                    .F_name {
+                        font-size: 5rem;
+                        color: whitesmoke;
+                        text-align: center;
+                    }
+                    .L_name {
+                        font-size: 5rem;
+                        text-align: center;
+                        background-color: whitesmoke;
+                    }
+                    .Skill_names {
+                        text-align: center;
+                        background-color: whitesmoke;
+                        opacity: 1;
+                    }
+                }
+            }
+            #Particles {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.NavActive {
+    background: whitesmoke;
+    height: 50px !important;
+    transition: all 0.5s ease;
+    .logo {
+        font-size: 2rem !important;
+    }
+    @include Breackpoint-up(lg) {
+        height: 100px !important;
+        padding: 50px !important;
+        .logo {
+            font-size: 3rem !important;
+        }
+        .dropdown {
+            top: 100px !important;
+        }
+    }
+}

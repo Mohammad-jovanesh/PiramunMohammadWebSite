@@ -1,0 +1,104 @@
+.Contact {
+    height: 100vh;
+    @include Breackpoint-up(lg) {
+        height: auto;
+        padding-bottom: 5%;
+        .Form_group {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .Contact_form {
+                width: 80% !important;
+            }
+            .btn_send {
+                margin: 10px auto !important;
+                text-align: center;
+                display: block;
+            }
+            .Map_time {
+                width: 80% !important;
+                margin-top: 50px;
+            }
+        }
+    }
+    &_title {
+        .h1_title {
+            font-size: 3rem;
+            .bg {
+                font-size: 10rem;
+                bottom: -75%;
+                -webkit-text-stroke: 2px #000 !important;
+            }
+        }
+    }
+    .Form_group {
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+        margin-top: 10%;
+        .Contact_form {
+            padding: 10px;
+            margin-right: 5%;
+            width: 60%;
+            textarea {
+                margin-top: 10px;
+                width: 100%;
+                border: 2px solid #000;
+                resize: none;
+                padding: 20px 10px;
+                height: 150px;
+                font-size: 2rem;
+            }
+            .btn_send {
+                width: 200px;
+                padding: 20px 60px;
+                font-size: 1rem;
+
+                margin-top: 30px;
+                outline: none;
+                cursor: pointer;
+            }
+            .form_inpu {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                position: relative;
+                > input {
+                    width: 100%;
+                    height: 40px;
+                    margin-top: 10px;
+                    border-radius: 5px;
+                    border: 2px solid #000;
+                    padding: 10px 15px;
+                    outline: none;
+                    font-size: 1.4rem;
+                }
+                > span {
+                    position: absolute;
+                    font-size: 1.2rem;
+                    visibility: hidden;
+                    top: 15px;
+                }
+                .Err_icon {
+                    right: 0;
+                    right: 17px;
+                }
+                .success_icon {
+                    right: 10px;
+                }
+            }
+        }
+        .Map_time {
+            width: 40%;
+            height: 356px;
+            .TimeWork {
+                font-size: 1.2rem;
+                margin-left: 10px;
+            }
+            .MyMap {
+                margin-top: 30px;
+            }
+        }
+    }
+}

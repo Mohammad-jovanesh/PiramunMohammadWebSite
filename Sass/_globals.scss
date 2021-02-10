@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+.bg {
+    position: absolute;
+    bottom: -85%;
+    left: 0;
+    font-size: 12rem;
+    width: 100%;
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+    opacity: 0.2;
+    text-transform: uppercase;
+    @include Breackpoint-up(lg) {
+        display: none;
+    }
+}
+
+.btn_lnk {
+    color: #000;
+    border: 2px solid #000;
+    padding: 20px 60px;
+    color: white;
+    background-color: #000;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+    &:hover {
+        background-color: white;
+        color: #000;
+        transition: all 0.5s ease;
+    }
+}
+
+.Section {
+    width: 100%;
+    max-width: 1400px;
+    padding: 10% 5% 5%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.h1_title {
+    position: relative;
+}
