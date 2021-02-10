@@ -1,0 +1,90 @@
+.Footer {
+    background-color: #000;
+    width: 100%;
+    height: auto;
+    max-width: 2500px;
+    padding: 2% 2% 10px;
+    .footer_container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        span {
+            color: #fff;
+            margin-left: 50px;
+            font-size: 1.5rem;
+            &:hover {
+                color: rgb(255, 233, 233);
+                cursor: pointer;
+                transition: all 0.5s ease;
+            }
+        }
+        .Tell_Email {
+            flex: 60%;
+
+            .MyTell {
+                margin-bottom: 30px;
+            }
+        }
+        .submit_icons {
+            flex: 40;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .newsletter {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            height: 50px;
+            .form-control {
+                width: 100%;
+                height: 100%;
+                padding-left: 15px;
+                font-size: 20px;
+            }
+            .btn_submit {
+                height: 100%;
+                width: 20%;
+                background-color: #0099ee;
+                border: none;
+                outline: none;
+                color: #fff;
+                text-transform: uppercase;
+            }
+        }
+        .social_media {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 30px;
+            margin-right: 60px;
+
+            i {
+                margin-left: 20px;
+                &:hover {
+                    color: rgb(255, 233, 233);
+                    cursor: pointer;
+                    transition: all 0.5s ease;
+                }
+            }
+        }
+    }
+    .bi {
+        color: #fff;
+        font-size: 2rem;
+    }
+    .copyright {
+        display: block;
+        width: 80%;
+        margin-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 10px;
+        text-align: center;
+        color: #fff;
+        font-size: 0.8rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.664);
+    }
+}

@@ -1187,3 +1187,106 @@ a {
 .Contact .Form_group .Map_time .MyMap {
   margin-top: 30px;
 }
+
+.Footer {
+  background-color: #000;
+  width: 100%;
+  height: auto;
+  max-width: 2500px;
+  padding: 2% 2% 10px;
+}
+
+.Footer .footer_container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.Footer .footer_container span {
+  color: #fff;
+  margin-left: 50px;
+  font-size: 1.5rem;
+}
+
+.Footer .footer_container span:hover {
+  color: #ffe9e9;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.Footer .footer_container .Tell_Email {
+  flex: 60%;
+}
+
+.Footer .footer_container .Tell_Email .MyTell {
+  margin-bottom: 30px;
+}
+
+.Footer .footer_container .submit_icons {
+  flex: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Footer .footer_container .newsletter {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.Footer .footer_container .newsletter .form-control {
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+  font-size: 20px;
+}
+
+.Footer .footer_container .newsletter .btn_submit {
+  height: 100%;
+  width: 20%;
+  background-color: #0099ee;
+  border: none;
+  outline: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.Footer .footer_container .social_media {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  margin-right: 60px;
+}
+
+.Footer .footer_container .social_media i {
+  margin-left: 20px;
+}
+
+.Footer .footer_container .social_media i:hover {
+  color: #ffe9e9;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.Footer .bi {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.Footer .copyright {
+  display: block;
+  width: 80%;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 0.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.664);
+}
