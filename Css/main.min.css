@@ -246,7 +246,7 @@ a {
 }
 
 .header .bacground .rigthSide .image {
-  background-image: url("../Images/2.jpg");
+  background-image: url("../Images/Desktop_header.jpg");
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -316,7 +316,7 @@ a {
     width: 100%;
   }
   .header .bacground .rigthSide .image {
-    background-image: url(../images/2.jpg);
+    background-image: url(../Images/Desktop_header.jpg) !important;
     background-position: bottom center !important;
     background-size: cover !important;
   }
