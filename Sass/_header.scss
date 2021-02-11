@@ -3,15 +3,19 @@
     height: 100vh;
 
     .nav_Mobile {
-        @include Breackpoint-Down(lg) {
-            display: none;
-        }
         width: 60px;
         height: 40px;
-
         position: relative;
         margin-right: 30px;
         z-index: 2000;
+        @include Breackpoint-up(sm) {
+            width: 40px;
+            height: 30px;
+            margin-right: 0;
+        }
+        @include Breackpoint-Down(lg) {
+            display: none;
+        }
         > span {
             position: absolute;
             width: 100%;
@@ -108,6 +112,9 @@
                 color: #000;
                 font-weight: 800;
                 z-index: 100;
+                @include Breackpoint-up(sm) {
+                    font-size: 1.5rem;
+                }
             }
             ul {
                 display: flex;
@@ -196,14 +203,23 @@
                     text-transform: uppercase;
                     margin-bottom: 30px;
                     font-family: $Font_Montserrat;
+                    @include Breackpoint-up(sm) {
+                        font-size: 3rem !important;
+                    }
                 }
                 .L_name {
+                    @include Breackpoint-up(sm) {
+                        font-size: 3rem !important;
+                    }
                     font-size: 7rem;
                     color: #000;
                     text-transform: uppercase;
                     font-family: $Font_Montserrat;
                 }
                 .Skill_names {
+                    @include Breackpoint-up(sm) {
+                        font-size: 1rem !important;
+                    }
                     font-size: 1.5rem;
                     opacity: 0.5;
                     margin-top: 20px;
@@ -281,6 +297,20 @@
         }
         .dropdown {
             top: 100px !important;
+        }
+    }
+    @include Breackpoint-up(sm) {
+        padding: 30px !important;
+        .logo {
+            font-size: 1.5rem !important;
+        }
+        .nav_Mobile {
+            width: 40px;
+            height: 30px;
+            margin: 0 !important;
+            > span {
+                height: 6px;
+            }
         }
     }
 }

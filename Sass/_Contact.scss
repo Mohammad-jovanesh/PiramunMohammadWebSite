@@ -1,26 +1,5 @@
 .Contact {
     height: 100vh;
-    @include Breackpoint-up(lg) {
-        height: auto;
-        padding-bottom: 5%;
-        .Form_group {
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            .Contact_form {
-                width: 80% !important;
-            }
-            .btn_send {
-                margin: 10px auto !important;
-                text-align: center;
-                display: block;
-            }
-            .Map_time {
-                width: 80% !important;
-                margin-top: 50px;
-            }
-        }
-    }
     &_title {
         .h1_title {
             font-size: 3rem;
@@ -34,7 +13,6 @@
     .Form_group {
         display: flex;
         align-items: center;
-
         width: 100%;
         margin-top: 10%;
         .Contact_form {
@@ -98,6 +76,44 @@
             }
             .MyMap {
                 margin-top: 30px;
+            }
+        }
+    }
+    @include Breackpoint-up(md) {
+        padding: 3% 1% !important;
+
+        .Contact_title {
+            h1 {
+                text-align: center;
+            }
+        }
+        .Form_group {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .Map_time {
+            height: auto !important;
+        }
+    }
+    @include Breackpoint-up(lg) {
+        height: auto;
+        padding-bottom: 5%;
+        .Form_group {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .Contact_form {
+                width: 80% !important;
+            }
+            .btn_send {
+                margin: 10px auto !important;
+                text-align: center;
+                display: block;
+            }
+            .Map_time {
+                width: 80% !important;
+                margin-top: 50px;
             }
         }
     }
