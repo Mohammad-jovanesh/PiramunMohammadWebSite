@@ -4,7 +4,35 @@
     height: auto;
     max-width: 2500px;
     padding: 2% 2% 10px;
+    @include Breackpoint-up(lg) {
+        .footer_container {
+            flex-direction: column;
 
+            .Tell_Email {
+                width: 100% !important;
+                padding: 5%;
+                margin-bottom: 2rem;
+                .MyTell,
+                .email {
+                    display: flex;
+                    flex-direction: column;
+                    span {
+                        margin-left: 0;
+                        margin-top: 10px;
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+            .social_media {
+                justify-content: space-between !important;
+                margin: 2% 0 !important;
+                padding: 0 20px !important;
+                i {
+                    margin-left: 0 !important;
+                }
+            }
+        }
+    }
     @include Breackpoint-up(md) {
         .footer_container {
             flex-direction: column;

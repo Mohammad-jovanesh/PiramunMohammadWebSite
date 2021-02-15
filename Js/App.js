@@ -4,7 +4,6 @@ particlesJS.load('Particles', './particles.json', function () {
 $('.MySkill_Slider').owlCarousel({
     loop: true,
     margin: 10,
-
     autoplay: true,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
@@ -37,27 +36,24 @@ let tl = gsap.timeline({
     })
 
     .to(dropdown, {
-        duration: 0.5,
+        duration: 0.3,
         height: 500,
 
     })
     .to(dropdown_ul, {
-        duration: 0.5,
+        duration: 0.3,
         opacity: 1,
         delay: 0.2
     })
 nav_Mobile.addEventListener("click", () => {
     nav_Mobile.classList.toggle("active_mobile_nav")
     dropdown.classList.toggle("dropdown_Active")
-
     if (nav_Mobile.classList.contains("active_mobile_nav")) {
         tl.play();
     } else {
         tl.reverse();
     }
 })
-
-
 const Filter_links = document.querySelectorAll(".filter ul li")
 const Btn_Filter = document.querySelector(".icon_filter")
 Btn_Filter.addEventListener("click", () => {
@@ -69,8 +65,6 @@ Btn_Filter.addEventListener("click", () => {
     })
     Btn_Filter.classList.toggle("filter_active")
 })
-
-
 const Image = document.querySelector(".AboutMe_img_txt .image")
 Image.addEventListener("mousemove", (e) => {
     let X = (window.innerWidth / 3 - e.pageX) / 20

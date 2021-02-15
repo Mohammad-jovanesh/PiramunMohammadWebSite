@@ -79,6 +79,29 @@
             }
         }
     }
+    @include Breackpoint-up(lg) {
+        height: auto;
+        padding-bottom: 5%;
+
+        .Form_group {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .Contact_form {
+                width: 80% !important;
+            }
+            .btn_send {
+                margin: 10px auto !important;
+                text-align: center;
+                display: block;
+            }
+            .Map_time {
+                width: 80% !important;
+                margin-top: 50px;
+            }
+        }
+    }
     @include Breackpoint-up(md) {
         padding: 3% 1% !important;
 
@@ -94,27 +117,6 @@
         }
         .Map_time {
             height: auto !important;
-        }
-    }
-    @include Breackpoint-up(lg) {
-        height: auto;
-        padding-bottom: 5%;
-        .Form_group {
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            .Contact_form {
-                width: 80% !important;
-            }
-            .btn_send {
-                margin: 10px auto !important;
-                text-align: center;
-                display: block;
-            }
-            .Map_time {
-                width: 80% !important;
-                margin-top: 50px;
-            }
         }
     }
 }

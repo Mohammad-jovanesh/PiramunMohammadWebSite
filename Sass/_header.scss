@@ -203,11 +203,15 @@
                     text-transform: uppercase;
                     margin-bottom: 30px;
                     font-family: $Font_Montserrat;
+
                     @include Breackpoint-up(sm) {
                         font-size: 3rem !important;
                     }
                 }
                 .L_name {
+                    @include Breackpoint-up(md) {
+                        font-size: 3.5rem !important;
+                    }
                     @include Breackpoint-up(sm) {
                         font-size: 3rem !important;
                     }
